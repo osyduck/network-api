@@ -98,10 +98,10 @@ impl OrchestratorClient {
             proof_hash: proof_hash.to_string(),
             proof,
             node_telemetry: Some(crate::nexus_orchestrator::NodeTelemetry {
-                flops_per_sec: Some(1),
-                memory_used: Some(1),
-                memory_capacity: Some(1),
-                location: Some("US".to_string()),
+                flops_per_sec: 1 as i32,
+                memory_used: 1 as i32,
+                memory_capacity: 1 as i32,
+                location: "US".to_string(),
             }),
         };
 
