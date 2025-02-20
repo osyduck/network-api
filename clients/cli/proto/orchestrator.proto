@@ -80,16 +80,16 @@ message SubmitProofRequest {
 // Performance stats of a node.
 message NodeTelemetry {
   // Flops per second
-  optional int32 flops_per_sec = 1;
+  int32 flops_per_sec = 1;
 
   // Memory used in bytes for the proof activity
-  optional int32 memory_used = 2;
+  int32 memory_used = 2;
 
   // Memory capacity in bytes of the node
-  optional int32 memory_capacity = 3;
+  int32 memory_capacity = 3;
 
   // Geo location of the node
-  optional string location = 4;
+  string location = 4;
 }
 
 // Paginated leaderboard.
