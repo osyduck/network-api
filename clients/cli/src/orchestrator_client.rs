@@ -130,10 +130,10 @@ impl OrchestratorClient {
             proof_hash: proof_hash.to_string(),
             proof,
             node_telemetry: Some(crate::nexus_orchestrator::NodeTelemetry {
-                flops_per_sec: flops as i32,
-                memory_used: program_memory as i32,
-                memory_capacity: total_memory as i32,
-                location: "US".to_string(),
+                flops_per_sec: Some(flops as i32),
+                memory_used: Some(program_memory as i32),
+                memory_capacity: Some(total_memory as i32),
+                location: Some("US".to_string()),
             }),
         };
 
