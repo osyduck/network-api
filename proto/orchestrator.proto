@@ -25,7 +25,7 @@ message ClientProgramProofRequest {
   string program_id = 4;
 
   // Authentication token for client id.
-  optional string client_id_token = 5;
+  string client_id_token = 5;
 
   // Duration of the proof in milliseconds.
   int32 proof_duration_millis = 6;
@@ -34,7 +34,7 @@ message ClientProgramProofRequest {
   int32 k = 7;
 
   // Prover ID for CLI provers
-  optional string cli_prover_id = 8;
+  string cli_prover_id = 8;
 }
 
 message ClientProgramProofResponse {
@@ -65,12 +65,12 @@ message ProofRequest {
   // Step of the trace to start the proof, inclusive.
   //
   // If missing, proving starts at the beginning of the trace.
-  optional int32 step_to_start = 3;
+  int32 step_to_start = 3;
 
   // Number of steps for this proof request.
   //
   // If zero, proving is skipped. If missing, all steps are proved.
-  optional int32 steps_to_prove = 4;
+  int32 steps_to_prove = 4;
 }
 
 message ProofResponse {
@@ -240,7 +240,7 @@ message ProverRequestRegistration {
 
   // The number of proof cycles that this prover expects to compute
   // over the course of one second. Proof cycles are proof steps times k.
-  optional double estimated_proof_cycles_hertz = 3;
+  double estimated_proof_cycles_hertz = 3;
 
   // The network to prove on.
   Network network = 4;
